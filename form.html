@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="form.css">
+    <title>Document</title>
 </head>
-
 <body>
+    <header class='header-oferta'>
+        <h1>Tests KL</h1>
+    </header>
     <div class="container">
-        <h1>TestsKL</h1>
-        <h4>Ми якнайшвидше проаналізуємо та виправимо дану помилку</h4>
-        <div class="input-block">
-            <input type="text" required name="input-name" />
-            <label for="input-name">Name</label>
-        </div>
-        <select class="select-css">
-            <option>Виберіть тест в якому видало помилку</option>
-            <option>ТП1</option>
-            <option>ТП2</option>
-            <option>ТП3</option>
-            <option>ТП4</option>
-            <option>ТП5</option>
-            <option>ТП6</option>
-            <option>ТП7</option>
+        <div class="form">
+          <label for="fname">Вкажіть ваше ім'я</label>
+          <input type="text" id="fname" name="firstname" placeholder="Ім'я...">
+      
+          <label for="tests-list">Оберіть тест</label>
+          <select id="tests-list">
+            <option disabled selected hidden>Виберіть тест який містить помилку</option>
             <option>Тест 10</option>
             <option>Тест 11</option>
             <option>Тест 12</option>
@@ -41,28 +34,36 @@
             <option>ТЛ13</option>
             <option>ТЛ14</option>
             <option>ТЛ15</option>
-        </select>
-        <div class="column">
-            <div class="first-column">
-                <div class="input-block">
-                    <input type="text" required />
-                    <label>Відповідь бота</label>
-                </div>
+            <option>ТП1</option>
+            <option>ТП2</option>
+            <option>ТП3</option>
+            <option>ТП4</option>
+            <option>ТП5</option>
+            <option>ТП6</option>
+            <option>ТП7</option>
+          </select>
+      
+
+          <div class="test">
+            <div>
+                <label class="test-bot">Вкажіть відповідь бота</label>
+                <input type="text" id="test-bot" placeholder="Відповідь бота...">
             </div>
-            <div class="second-column">
-                <div class="input-block">
-                    <input type="text" required />
-                    <label>Відповідь з внс</label>
-                </div>
+       
+            <div>
+                <label class="test-vns">Вкажіть відповідь з ВНС</label>
+                <input type="text" id="test-vns" placeholder="Відповідь з ВНС...">
             </div>
+            
+          </div>
+
+
+          <label for="subject">Вкажіть умову завдання</label>
+          <textarea id="subject" name="subject" placeholder="Умова завдання..." style="min-height:200px"></textarea>
+      
+          <input type="submit" value="Надіслати">
+      
         </div>
-        <div class="input-block">
-            <textarea required id="input-message"></textarea>
-            <label for="input-message">Умова завдання</label>
-        </div>
-        <div class="btn-lrg submit-btn">Send Message</div>
     </div>
-
 </body>
-
 </html>
