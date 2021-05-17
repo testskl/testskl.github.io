@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="form.css">
-    <link rel="shortcut icon" href="logo512.png" type="image/png">
     <title>Document</title>
 </head>
 <body>
@@ -14,10 +13,10 @@
     </header>
     <div class="container">
         <div class="form">
-          <label for="fname">Вкажіть ваше ім'я</label>
-          <input type="text" id="fname" name="firstname" placeholder="Ім'я...">
+          <label>Вкажіть ваше ім'я</label>
+          <input type="text" id="fname" placeholder="Ім'я...">
       
-          <label for="tests-list">Оберіть тест</label>
+          <label>Оберіть тест</label>
           <select id="tests-list">
             <option disabled selected hidden>Виберіть тест який містить помилку</option>
             <option>Тест 10</option>
@@ -59,12 +58,14 @@
           </div>
 
 
-          <label for="subject">Вкажіть умову завдання</label>
-          <textarea id="subject" name="subject" placeholder="Умова завдання..." style="min-height:200px"></textarea>
+          <label>Вкажіть умову завдання</label>
+          <textarea id="task" placeholder="Умова завдання..." style="min-height:200px"></textarea>
       
-          <input type="submit" value="Надіслати">
+          <input type="submit" id="send" value="Надіслати">
       
         </div>
     </div>
+
+    <script src="form.js"></script>
 </body>
 </html>
