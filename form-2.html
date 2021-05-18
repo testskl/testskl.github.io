@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo512.png" type="image/png">
+    <link rel="stylesheet" href="form-2.css">
+    <title>TestsKL</title>
+</head>
+<body>
+    <header class='header-oferta'>
+        <h1>Tests KL</h1>
+    </header>
+
+    <div class="container">
+        <label class="tname">Вкажіть ваше ім'я</label>
+        <input type="text" id="fname" placeholder="Ім'я...">
+
+        <div class="input__wrapper">
+            <input name="file" type="file" name="file" id="input__file" class="input input__file f-1" multiple>
+            <label for="input__file" class="input__file-button">
+              <span class="input__file-icon-wrapper"><img class="input__file-icon" src="./add.svg" alt="Виберіть файл"
+                  width="25"></span>
+              <span class="input__file-button-text">Виберіть файл</span>
+            </label>
+        </div>
+      
+        <div class="input__wrapper">
+            <input name="file" type="file" name="file" id="input__file-2" class="input input__file f-2" multiple>
+            <label for="input__file-2" class="input__file-button">
+              <span class="input__file-icon-wrapper"><img class="input__file-icon" src="./add.svg" alt="Виберіть файл"
+                  width="25"></span>
+              <span class="input__file-button-text">Виберіть файл</span>
+            </label>
+
+            <input type="submit" class="send-data">           
+        </div>
+    </div>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+    <script>
+        let firebaseConfig = {
+            apiKey: "AIzaSyChTf6B0IeeDCBqmfa7D7aQhbfctX-q2co",
+            authDomain: "testskl-image.firebaseapp.com",
+            databaseURL: "https://testskl-image-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "testskl-image",
+            storageBucket: "testskl-image.appspot.com",
+            messagingSenderId: "597027654007",
+            appId: "1:597027654007:web:00fb95d73232a3ded9f972"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="form-2.js"></script>
+</body>
+</html>
