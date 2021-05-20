@@ -48,7 +48,7 @@ const answerBot = document.querySelector('#test-bot');
 const answerVNS = document.querySelector('#test-vns');
 const task = document.querySelector('#task');
 
-const token = '1756797458:AAEKKvJUBjAh819PaAUchs6009eUxemgZyw';
+const token = '1756797458:AAG3f32xEQy8S-WNIDrOCtDesNLBrvAqMx8';
 const chatId = currentLocationArr['id'];
 const groupId = '-1001492578402';
 const problem = problemsList[currentLocationArr['code']];
