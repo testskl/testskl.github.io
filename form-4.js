@@ -2,7 +2,6 @@ let currentLocation = window.location.href;
 let currentLocationArr = {};
 currentLocation = currentLocation.split('?')[1].split('&').forEach(item => currentLocationArr[item.split('=')[0]] = item.split('=')[1]);
 
-
 const lowLetters = 'abcdefghijklmnopqrstuvwxyz';
 const upLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const arrNumbers = {
@@ -40,31 +39,22 @@ const problemsList = {
     '05': 'Жодна із перелічених вище проблем',
 }
 
-
-const name = document.querySelector('#fname');
-const test = document.querySelector('#tests-list');
-const answerBot = document.querySelector('#test-bot');
-const answerVNS = document.querySelector('#test-vns');
-const task = document.querySelector('#task');
-
 const token = '1756797458:AAEKKvJUBjAh819PaAUchs6009eUxemgZyw';
 const chatId = currentLocationArr['id'];
 const groupId = '-1001492578402';
 const problem = problemsList[currentLocationArr['code']];
 
+const name = document.querySelector('#fname');
+const topic = document.querySelector('#topic');
+const problemText = document.querySelector('#problem');
 
 document.querySelector('#send').onclick = () => {
-    let check = test.options[test.selectedIndex].value !== 'Виберіть тест який містить помилку';
-    if(!!name.value && check && !!answerBot.value && !!answerVNS.value && !!task.value) {
-        fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${groupId}&text=Проблема: ${problem}%0AКористувач: @${deCodeStr(currentLocationArr['user'])}%0AІм'я: ${name.value}%0ATelegramID: ${chatId}%0AТест: ${test.options[test.selectedIndex].value}%0AУмова: ${task.value}%0AВідповідь бота: ${answerBot.value}%0AВідповідь з ВНС: ${answerVNS.value}`);
+    if(!!name.value && !!topic.value && !!problemText.value) {
+        fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${groupId}&text=Проблема: ${problem}%0AКористувач: @${deCodeStr(currentLocationArr['user'])}%0AІм'я: ${name.value}%0ATelegramID: ${chatId}%0AТема: ${topic.value}%0AТекст проблеми: ${problemText.value}`);
 
-        fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=Ваша заявка прийнята. Незабаром з Вами зв'яжеться менеджер.`);
+        fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=Ваша заявка прийнята. Незабаром з Вами зв'яжеться менеджер.`)
     }
     else {
-        alert('Всі поля повинні бути заповнені.');
+        alert('Всі поля повинні бути заповнені.')
     }
-   
 }
-
-
-// %0A
