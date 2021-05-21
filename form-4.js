@@ -39,7 +39,7 @@ const problemsList = {
     '05': 'Жодна із перелічених вище проблем',
 }
 
-const token = '1756797458:AAEKKvJUBjAh819PaAUchs6009eUxemgZyw';
+const token = '1756797458:AAG3f32xEQy8S-WNIDrOCtDesNLBrvAqMx8';
 const chatId = currentLocationArr['id'];
 const groupId = '-1001492578402';
 const problem = problemsList[currentLocationArr['code']];
