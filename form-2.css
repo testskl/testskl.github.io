@@ -20,6 +20,11 @@ body {
   text-align: center;
 }
 
+.instruction {
+  width: 90%;
+  margin: 30px auto;
+}
+
 .container {
   margin: 50px auto;
   width: 400px;
@@ -56,7 +61,7 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 input[type=submit]:hover {
@@ -67,7 +72,7 @@ input[type=submit]:hover {
     width: 100%;
     position: relative;
     margin: 15px 0;
-    text-align: center;
+    /* text-align: center; */
   }
   
   .input__file {
@@ -117,4 +122,22 @@ input[type=submit]:hover {
     border-radius: 3px;
     cursor: pointer;
     margin: 0 auto;
+  }
+
+  .send-data {
+    width: fit-content;
+    margin: auto;
+  }
+
+  @media(max-width: 767px) {
+    .container {
+      width: 94%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  @media(max-width: 450px) {
+    .container {
+      padding: 0px 40px;
+    }
   }
